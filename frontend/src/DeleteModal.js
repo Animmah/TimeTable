@@ -12,7 +12,7 @@ const DeleteModal=({isOpen,onRequestClose,weekDay,index})=>{
         }
 
         try{
-            await axios.post("http://localhost:4000/delete/",{...deleteData},{withCredentials:true});
+            await axios.post("https://timetable-backend.onrender.com/delete/",{...deleteData},{withCredentials:true});
             console.log("deleted from front");
         }
         catch(err){

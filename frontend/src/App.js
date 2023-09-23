@@ -27,7 +27,7 @@ function App() {
     const getData=async()=>
     {
       try{
-        const res=await axios.get('http://localhost:4000/');
+        const res=await axios.get('https://timetable-backend.onrender.com/');
         setData(res.data);
       }
       catch(err){

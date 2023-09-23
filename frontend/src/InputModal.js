@@ -19,7 +19,7 @@ const InputModal=({isOpen,onRequestClose, weekDay})=>{
     const handleSubmit=async(e)=>{
         e.preventDefault();
         try{
-        await axios.post("http://localhost:4000",{day:weekDay,...inputData},{withCredentials:true});
+        await axios.post("https://timetable-backend.onrender.com/",{day:weekDay,...inputData},{withCredentials:true});
         console.log("sent");
         }
         catch(err){

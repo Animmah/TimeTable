@@ -3,8 +3,10 @@ const mongoose=require('mongoose');
 const Schedule=require('./Model/DataModel');
 const cors=require('cors');
 const app = express();
+const PORT = process.env.PORT || 4000;
 require('dotenv').config();
 app.use(express.json());
+
 app.use(cors({
     origin: ["http://localhost:3000"],
     methods: ["GET", "POST", "PUT", "DELETE"],
@@ -68,6 +70,6 @@ app.post("/delete",async(req,res)=>{
         res.status(500).json({err:'cannot delete'});
     }
 });
-app.listen(4000,()=>{
+app.listen(PORT,()=>{
     console.log("Yosh!");
 });
